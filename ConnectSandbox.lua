@@ -15,7 +15,7 @@ ffi.cdef([[
 req, require = require, function(str, downloadUrl, openurl)
     local result, data = pcall(req, str)
     if not result then
-        ffi.C.MessageBoxA(ffi.cast('void*', readMemory(0x00C8CF88, 4, false)), ('Error, lib "%s" not found. Download: %s\n\nvk.com/chaposcripts'):format(str, downloadUrl or 'ссылка не найдена', str, downloadUrl or 'ссылка не найдена'), 'ConnectSandbox error', 0x50000)
+        ffi.C.MessageBoxA(ffi.cast('void*', readMemory(0x00C8CF88, 4, false)), ('Error, lib "%s" not found. Download: %s\n\nvk.com/chaposcripts'):format(str, downloadUrl or 'Г±Г±Г»Г«ГЄГ  Г­ГҐ Г­Г Г©Г¤ГҐГ­Г ', str, downloadUrl or 'Г±Г±Г»Г«ГЄГ  Г­ГҐ Г­Г Г©Г¤ГҐГ­Г '), 'ConnectSandbox error', 0x50000)
         if downloadUrl then
             os.execute('explorer "'..downloadUrl..'"')
         end
